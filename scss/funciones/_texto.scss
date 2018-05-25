@@ -1,0 +1,54 @@
+//--------------------------------------------------------------------------------------------------------------
+//-------------------------------------------Funciones para textos----------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
+
+
+
+/// @Funcion para elegir la fuente del texto!
+/// @El parametro requerido va de titulos hasta parrafos!
+/// 
+/// @ejemplo
+///
+///     .titulo {
+///       font-family: font(1);
+///     }
+/// 
+///     .descripcion {
+///       font-family: font(3);
+///     }
+/// 
+
+
+$a: arial;
+$b: sans-serif;
+$c: Lato;
+
+@function font($n){
+	@return
+		nth(($a, $b, $c), $n);
+}
+
+/// @Funcion para elegir el tamaño de la fuente del texto!
+/// @El parametro requerido va de titulos hasta parrafos!
+/// 
+/// @ejemplo
+///
+///     .titulo {
+///       font-family: fs(1);
+///     }
+/// 
+///     .descripcion {
+///       font-family: fs(3);
+///     }
+/// 
+
+
+$a: 24px;
+$b: 16px;
+$c: 10px;
+
+@function fs($n){
+	@return
+		nth(($a, $b, $c), $n);
+}
+

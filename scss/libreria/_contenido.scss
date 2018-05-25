@@ -1,0 +1,67 @@
+//--------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------CONTENIDO----------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
+
+.container{
+
+	// @include container($m-right-container);
+	@include container(40px);
+
+	// @include tablet{
+	// 	@include container($m-right-container);
+	// }
+
+	// @include phone{
+	// 	@include container($m-right-container);
+	// }
+}
+
+
+.caja.activo .int.border.gris span,
+.caja.activo .int.border.gris a{
+	color: #000;
+	text-decoration: none;
+}
+
+.caja.activo span,
+.caja.activo a{
+	color: #000;
+	// text-decoration: underline;
+}
+
+.caja.activo .int.border.gris,
+.int.border{
+	border-bottom: 1px solid black;
+}
+
+.int.border.gris{
+	border-bottom: 1px solid gray(200);
+}
+
+.gris{
+	// transition: .2s;
+	color: gray(200);
+}
+
+
+
+.img-reposo{
+	z-index: 10;
+	@include modal(255, .6);
+	@include center-flex;
+	.figura{
+		@include metamorfosis(10, siempre);
+		transition: clip .2s;
+		width: 50%;
+		height: 75%;
+		background-color: black;
+	}
+}
+
+.titulo.sticky{
+	left: 20px !important;
+	top: 60px !important;
+}
+
+
+

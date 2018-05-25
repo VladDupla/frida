@@ -1,0 +1,235 @@
+//--------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------FUNCIONES----------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
+
+//$Margin&Padding----DuplaGrid----------------------------------------------------------------------------------
+
+$marginRow: 0;
+$paddingCol: 0;
+
+
+//----------------------------------------//
+//------------Grid-Responsive-Sistem------//
+//----------------------------------------//
+
+//------------Fila---------//
+@for $i from 1 through 1{
+	.row{
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: $marginRow;
+		margin-left: $marginRow;
+		width: 100%;
+	}
+}
+
+
+
+//--------Propiedad Principal de Todas las "col"---------//
+%col-propiedades{
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-left: $paddingCol;
+	padding-right: $paddingCol;
+}
+@for $i from 1 through 10{
+	.col-#{$i}{
+	    @extend %col-propiedades;
+	}
+	.col {
+	    @extend %col-propiedades;
+	}
+
+
+	.col-c-#{$i} {
+	    @extend %col-propiedades;
+	}
+	.col-c {
+	    @extend %col-propiedades;
+	}
+
+
+	.col-m-#{$i} {
+	    @extend %col-propiedades;
+	}
+	.col-m {
+	    @extend %col-propiedades;
+	}
+
+
+	.col-g-#{$i} {
+	    @extend %col-propiedades;
+	}
+	.col-g {
+	    @extend %col-propiedades;
+	}
+
+
+	.col-g-auto{
+	    @extend %col-propiedades;
+	}
+	.col-m-auto{
+	    @extend %col-propiedades;
+	}
+	.col-c-auto{
+	    @extend %col-propiedades;
+	}
+	.col-auto{
+	    @extend %col-propiedades;
+	}
+
+}
+
+//--------Propiedad para que la columna tome---------//
+//---------------el ancho de acuerdo a--------------//
+//------------------su contenido-------------------//
+
+@for $i from 1 through 1{
+
+	.col-auto{				//Columnas extra-Chicas para telefonos
+	    flex: 0 0 auto;
+	    width: auto;
+	    max-width: none;
+	}
+	@media (min-width: 481px){ //Columnas Chicas para tablets
+		.col-c-auto{
+		    flex: 0 0 auto;
+		    width: auto;
+		    max-width: none;
+		}
+	}		
+	@media (min-width: 769px){ //Columnas medianas para desktops
+		.col-m-auto{
+		    flex: 0 0 auto;
+		    width: auto;
+		    max-width: none;
+		}
+	}
+	@media (min-width: 992px){ //Columnas grandes para Full-4k
+		.col-g-auto{
+		    flex: 0 0 auto;
+		    width: auto;
+		    max-width: none;
+		}
+	}
+}
+
+//--------Propiedad para calcular el resto---------//
+//--------del ancho cuando no se especifica--------//
+@for $i from 1 through 1{
+	.col{					//Columnas extra-Chicas para telefonos
+	    flex-basis: 0;
+	    flex-grow: 1;
+	    max-width: 100%;
+	}
+	@media (min-width: 481px){ //Columnas Chicas para tablets
+		.col-c {
+		    flex-basis: 0;
+		    flex-grow: 1;
+		    max-width: 100%;
+		}
+	}
+	@media (min-width: 769px){ //Columnas medianas para desktops
+		.col-m {
+		    flex-basis: 0;
+		    flex-grow: 1;
+		    max-width: 100%;
+		}
+	}
+	@media (min-width: 992px){ //Columnas grandes para Full-4k
+		.col-g {
+		    flex-basis: 0;
+		    flex-grow: 1;
+		    max-width: 100%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+//--------Propiedad para calcular el espacio---------//
+//---------------a ocupar en la fila-----------------//
+
+
+
+@for $i from 1 through 10{
+	$u: (100% / 10);
+	$res: $u * $i;
+
+	.col-#{$i}{				//Columnas extra-Chicas para telefonos
+	    flex: 0 0 $res;
+		max-width: $res;
+	}
+	@media (min-width: 481px){ //Columnas Chicas para tablets
+		.col-c-#{$i} {
+		    flex: 0 0 $res;
+			max-width: $res;
+		}
+	}
+	@media (min-width: 769px){ //Columnas medianas para desktops
+		.col-m-#{$i} {
+		    flex: 0 0 $res;
+			max-width: $res;
+		}
+	}
+	@media (min-width: 992px){ //Columnas grandes para Full-4k
+		.col-g-#{$i} {
+		    flex: 0 0 $res;
+			max-width: $res;
+		}
+	}
+}
+
+
+
+//--------Propiedad para calcular el espacio---------//
+//---------------que puede dejar vacio---------------//
+//------------------a su izquierda-------------------//
+
+
+
+@for $i from 1 through 9{
+	$u: (100% / 9);
+	$res: $u * $i;
+
+	.espacio-#{$i}{
+	    margin-left: $res;
+	}
+}
+
+//----------------------------------------//
+//--------Cierre-Grid-Responsive-Sistem---//
+//----------------------------------------//
+
+
+
+
+
+
+
+
+
+// $i: 1;
+// @while $i <= 12 {
+//   .item-#{$i} { width: 100% / $i; }
+//   $i: $i + 1;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+
+.container{
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+
+	.header{
+		.titulo{
+			h2{
+				font-family: $ff-def;
+			}
+		}
+
+		.container-menu{
+			display: flex;
+			align-items: center;
+			.menu{
+				margin-left: 4px;
+				margin-bottom: 10px;
+
+				@include hasta(430px){
+					margin-left: 0;
+				}
+
+				.item-menu{
+						
+					@include padding-h(1);
+
+					display: inline-block;
+					span{
+						font-size: $texto-titulo;
+						color: #BCBEC0;
+					}
+					a{
+						font-size: $texto-titulo;
+						color: #BCBEC0;
+
+						transition: all .2s;
+						&:hover{
+							color: black;
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+}
+

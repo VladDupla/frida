@@ -1,0 +1,38 @@
+.container{
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	.info{
+		.parrafo{
+			margin-bottom: 20px;
+			blockquote{
+				text-indent: 30px;
+			}
+		}
+
+		.team{
+			.equipo{
+				.caja{
+					p{
+						font-family: $ff-def;
+						font-size: $texto-titulo - 4px;
+					}
+				}
+
+			}
+
+			.anteriores{
+				.caja{
+					p{
+						font-family: $ff-def;
+						font-size: $texto-titulo - 4px;
+					}
+				}
+				@include phone{
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+}

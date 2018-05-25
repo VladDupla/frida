@@ -1,0 +1,30 @@
+.container{
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	.noticias{
+
+		// %place-imgs{
+		// 	@include back-img();
+		// 	padding-bottom: 112.5%;
+		// 	width: 100%;
+		// 	z-index: -1;
+		// 	.img-post{
+		// 		opacity: 0;
+		// 		z-index: -1;
+		// 	}
+		// }
+
+		.permanentes{
+
+			.subtitulo{
+				@include tablet{
+					margin-top: 20px;
+				}
+			}
+			
+
+		}
+	}
+}

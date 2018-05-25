@@ -1,0 +1,39 @@
+//--------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------TIPOGRAFIA---------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
+
+
+//$textos-------------------------------------------------------------------------------------------------------
+@font-face{
+	font-family: "ff-normal";
+	src: url("../fonts/Starling Book.otf") format('opentype'),
+		 url("../fonts/Starling Book Italic.otf") format('opentype');
+	font-weight: normal;
+	font-style:normal;
+}
+
+// @font-face{
+// 	font-family: "ff-italica";
+// 	font-weight: normal;
+// 	font-style:normal;
+// }
+
+
+
+
+$ff-def: system-ui;
+// $ff-titulo:"ff-italica", $ff-def;
+// $ff-subtitulo:;
+$ff-parrafo: "ff-normal", $ff-def;
+
+$line-h: 25px;
+
+
+$texto-titulo: 20px;
+$texto-subtitulo: $texto-titulo;
+$texto-parrafo: $texto-titulo;
+
+
+$texto-chico: 12px;
+$texto-regular: 14px;
+$texto-grande: 18px;

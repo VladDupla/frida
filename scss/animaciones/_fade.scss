@@ -1,0 +1,138 @@
+//-------------------------------------------------------------------------------------------------------
+//-------------------------------------------------Animaciones-------------------------------------------
+//-------------------------------------------------------------------------------------------------------
+
+// animation-name: name;
+// animation-direction: normal, alternate, reverse;
+// animation-duration: $time;
+// animation-delay: $delay;
+// animation-fill-mode: forwards, backwards, both;
+// animation-play-state: paused, running;
+// animation-iteration-count: (number), infinite;
+// animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n);
+
+
+/// Animacion Fade/desvanecerse
+/// 
+/// @ejemplo
+/// 
+/// 	.class-fade{
+/// 		@include fade(TIEMPO/opcional/, REPETICIONES/opcional/);
+/// 		@include fade(3, 0, 2);
+/// 	}
+/// 
+
+@mixin pausa{
+	animation-play-state: paused;
+}
+
+
+@mixin fade($time: 1, $count: 1){
+	// animation: ;
+	animation-name: fade;
+	animation-direction: normal;
+	animation-duration: #{$time}s;
+	animation-delay: 0;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+	animation-timing-function: ease-out;
+	
+	@if ($count == siempre){
+		animation-iteration-count: infinite;
+	}
+	@else{
+		animation-iteration-count: $count;
+	}
+}
+@keyframes fade{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+/// Animacion Metamorfosis
+/// 
+/// @ejemplo
+/// 
+/// 	.class-metamorfosis{
+/// 		@include metamorfosis(TIEMPO/opcional/, REPETICIONES/opcional/);
+/// 		@include metamorfosis(10, siempre);
+/// 	}
+/// 
+
+@mixin metamorfosis($time: 1, $count: 1){
+	// animation: ;
+	animation-name: metamorfosis;
+	animation-direction: alternate;
+	animation-duration: #{$time}s;
+	animation-delay: 0;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+	animation-timing-function: linear;
+	
+	@if ($count == siempre){
+		animation-iteration-count: infinite;
+	}
+	@else{
+		animation-iteration-count: $count;
+	}
+}
+@keyframes metamorfosis{
+	0%{
+		@include circulo;
+	}
+	10%{
+		@include estrella;
+	}
+	20%{
+		@include cruz;
+	}
+	30%{
+		@include hoja-l;
+	}
+	40%{
+		@include speed-t;
+	}
+	50%{
+		@include boomerang-b;
+	}
+	60%{
+		@include iglesia;
+	}
+	70%{
+		@include sesgado-l;
+	}
+	80%{
+		@include pad-r;
+	}
+	90%{
+		@include rombo;
+	}
+	100%{
+		@include triangulo;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

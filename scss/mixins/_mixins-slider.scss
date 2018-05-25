@@ -1,0 +1,76 @@
+//--------------------------------------------------------------------------------------------------------------
+//--------------------------------------------Slider------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
+
+
+
+/// @Mixin para con las Propiedades necesarias para hacer un slider!
+/// @Recuerda que las clases deben de estar iguales en el html y solo van IMG!
+/// @Se debe de colocar en el padre del slider-container!
+/// 
+/// @ejemplo
+///
+///     .padre-del-slider-container{
+///         @include slider;
+///     }
+/// 
+/// 
+/// 
+
+%place-flex{
+	@include center-flex;
+}
+@mixin slider{
+	.slider-container{
+		z-index: 2;
+
+		@include modal;
+		@extend %place-flex;
+		
+		img{
+			@include img;
+		}
+
+
+		%place-cursor{
+			z-index: 3;
+			cursor: pointer;
+		}
+		%place-flechas{
+			@extend %place-cursor;
+			@extend %place-flex;
+			font-size: 24px;
+			color: black;
+		}
+		%place-phone-text-color{
+			@include phone{
+				color: gray(170)
+			}
+		}
+
+		.flecha-slider-izq{
+			@include cuadro(50);
+			@include absoluto-t-l();
+			top: calc(50% - 15px);
+			@extend %place-flechas;
+
+			@extend %place-phone-text-color;
+		}
+		.flecha-slider-der{
+			@include cuadro(50);
+			@include absoluto-t-r();
+			top: calc(50% - 15px);
+			@extend %place-flechas;
+
+			@extend %place-phone-text-color;
+		}
+
+		.btn-cerrar{
+			@extend %place-cursor;
+			font-size: 18px;
+			@include absoluto-t-r(20, 20);
+
+			@extend %place-phone-text-color;
+		}
+	}
+}

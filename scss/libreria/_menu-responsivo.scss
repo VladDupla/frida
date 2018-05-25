@@ -1,0 +1,45 @@
+.container-menu{
+	.menu{
+		display: flex;
+
+		padding: 0;
+		margin: 0;
+
+		justify-content: center;
+		align-items: center;
+
+		@include tablet{
+			width: 100vw;
+			height: 100vh;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/*Botton Responsive*/
+		.btn-hamburguesa{
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin: 12px;
+			cursor: pointer;
+			display: none;
+
+			@include tablet{
+				display: block;
+			}
+
+			.linea-hamburguesa{
+				width: 30px;
+				height: 1px;
+				background-color: black;
+				margin: 8px 5px;
+			}
+		}
+
+		.item-menu{
+			text-decoration: none;
+			list-style: none;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+$margen: 16px;
+
+.alignleft{
+    float: left;
+    max-width: calc(50% - #{$margen});
+    margin-left: 0;
+
+    margin-top: $margen;
+    margin-bottom: $margen;
+    display: inline-block;
+
+    @include phone{
+        max-width: calc(50% - #{$margen / 2});
+        // margin-top: $margen / 2;
+        // margin-bottom: $margen / 2;
+    }
+}
+
+.aligncenter{
+    max-width: 100%;
+    clear: both;
+    display: block;
+    margin: $margen auto;
+}
+
+.alignright{
+    float: right;
+    max-width: calc(50% - #{$margen});
+    margin-right: 0;
+    margin-top: $margen;
+    margin-bottom: $margen;
+    display: inline-block;
+
+    @include phone{
+        max-width: calc(50% - #{$margen / 2});
+        // margin-top: $margen / 2;
+        // margin-bottom: $margen / 2;
+    }
+}

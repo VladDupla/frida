@@ -1,0 +1,94 @@
+.container{
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	.proyectos-internos{
+
+		%place-imgs{
+			@include back-img();
+			padding-bottom: 112.5% + 56.25%;
+			width: 200%;
+			z-index: -1;
+			.img-post{
+				opacity: 0;
+				z-index: -1;
+			}
+		}
+
+		.permanentes{
+
+			.subtitulo{
+				@include tablet{
+					margin-top: 20px;
+				}
+			}
+			
+			.imagenes-permanentes{
+				@extend %place-imgs;
+				@include absoluto-t-l;
+				left: calc(100%);
+
+				@include tablet{
+					padding-bottom:56.25%;
+					width: 50%;
+					left: 250px;
+					top: 20px;
+
+					display: none;
+				}
+
+			}
+
+		}
+
+		.temporales{
+
+			.subtitulo{
+				@include tablet{
+					margin-top: 20px;
+				}
+			}
+			
+			
+			.imagenes-temporales{
+				@extend %place-imgs;
+				@include absoluto-t-r;
+				right: calc(100% + 10px);
+				width: 150%;
+				
+				@include tablet{
+					padding-bottom: 56.25%;
+					width: 50%;
+					right: unset;
+					left: 250px;
+					top: 20px;
+
+					display: none;
+				}
+
+			}
+
+		}
+
+		.tipo{
+
+			.subtitulo{
+				@include tablet{
+					margin-top: 20px;
+				}
+			}
+			
+			.caja{
+				@include margin-v(8);	
+			}
+
+			span, a{
+				&:hover{
+					text-decoration: underline;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

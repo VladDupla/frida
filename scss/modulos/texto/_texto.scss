@@ -1,0 +1,23 @@
+.container{
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	//NO agregar ningunca Propiedad Aqui!
+	.texto{
+		
+		.descripcion-post{
+
+			.texto-general{
+				
+				p{
+					text-indent: 30px;
+					margin-bottom: 0;
+					&:nth-of-type(1){
+						text-indent: 0;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+}

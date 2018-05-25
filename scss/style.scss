@@ -1,0 +1,76 @@
+
+//--------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------COMPILADOR---------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
+
+@import "variables/_variables.scss";
+@import "variables/_tipografia.scss";
+
+
+@import "mixins/_mixins-visibilidad.scss";
+@import "mixins/_mixins-figuras.scss";
+@import "mixins/_mixins-img-responsive.scss";
+@import "mixins/_mixins-margins.scss";
+@import "mixins/_mixins-media-querys.scss";
+@import "mixins/_mixins-paddings.scss";
+@import "mixins/_mixins-videos-responsive.scss";
+@import "mixins/_mixins-width.scss";
+@import "mixins/_mixins-slider.scss";
+
+
+@import "animaciones/_fade.scss";
+
+
+@import "funciones/_colores.scss";
+@import "funciones/_texto.scss";
+
+
+@import "animaciones/_fade.scss";
+
+
+@import "libreria/_html.scss";
+@import "libreria/_contenido.scss";
+@import "libreria/_wp-aligns.scss";
+// @import "libreria/_menu-responsivo.scss";
+
+
+
+
+
+//-------------------------------------------------------------------
+@import "libreria/_DuplaGrid-Standar.scss";
+
+// @import "libreria/_DuplaGrid-Comodo.scss";
+
+// @import "libreria/_DuplaGrid-Extenso.scss";
+//-------------------------------------------------------------------
+
+
+
+
+
+
+
+@import "modulos/contacto/_contacto.scss";
+//-------------------------------------------------------------------
+@import "modulos/home/_home.scss";
+//-------------------------------------------------------------------
+@import "modulos/info/_info.scss";
+//-------------------------------------------------------------------
+@import "modulos/noticias/_noticias.scss";
+@import "modulos/noticias/_single-noticia.scss";
+//-------------------------------------------------------------------
+@import "modulos/proyectos/_proyectos.scss";
+@import "modulos/proyectos/_single-proyecto.scss";
+//-------------------------------------------------------------------
+@import "modulos/texto/_texto.scss";
+//-------------------------------------------------------------------
+@import "modulos/_footer.scss";
+@import "modulos/_menu.scss";
+
+
+
+
+
+
+

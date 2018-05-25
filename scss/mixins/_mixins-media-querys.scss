@@ -1,0 +1,55 @@
+/*------------------------------------------------------------------------------------*/
+/*----------------------------------------Breakpoints---------------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+
+@mixin mini-phone{
+	@media (max-width: 380px){
+		@content;
+	}
+}
+
+@mixin phone{
+	@media (max-width: 480px){
+		@content;
+	}
+}
+
+@mixin tablet{
+	@media (max-width: 768px){
+		@content;
+	}
+}
+
+@mixin desk{
+	@media (max-width: 1024px){
+		@content;
+	}
+}
+
+@mixin full-4k{
+	@media (max-width: 2500px){
+		@content;
+	}
+}
+
+
+@mixin desde($numero: 1px){
+	@media (min-width: $numero){
+		@content;
+	}
+}
+
+@mixin hasta($numero: 2000px){
+	@media (max-width: $numero){
+		@content;
+	}
+}
+
+@mixin entre($numero1: 1px, $numero2: 2000px){
+	@media (min-width: $numero1) and (max-width: $numero2){
+		@content;
+	}
+}
+
+
